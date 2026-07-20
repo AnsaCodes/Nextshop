@@ -1,12 +1,31 @@
+import Image from "next/image";
+import FloatingCard from "./FloatingCard";
+
 export default function HeroImage() {
   return (
-    <div className="flex justify-center">
+    <div className="relative flex justify-center">
 
-      <div className="flex h-[550px] w-[450px] items-center justify-center rounded-[40px] bg-orange-100 text-xl font-semibold text-gray-500 shadow-xl">
+      {/* Background Circle */}
 
-        Hero Image
+      <div className="absolute h-[430px] w-[430px] rounded-full bg-orange-100"></div>
 
-      </div>
+      {/* Small Circle */}
+
+      <div className="absolute top-10 right-5 h-12 w-12 rounded-full bg-orange-300"></div>
+
+      <div className="absolute bottom-12 left-6 h-8 w-8 rounded-full bg-orange-200"></div>
+
+      {/* Hero Image */}
+
+      <Image
+        src="/images/hero/hero-model.jpg"
+        alt="Hero Model"
+        width={430}
+        height={560}
+        priority
+        className="relative z-10 object-contain"
+      />
+      <FloatingCard />
 
     </div>
   );
