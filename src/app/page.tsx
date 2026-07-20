@@ -1,13 +1,15 @@
+import Navbar from "./components/navbar/Navbar";
+
 export default function HomePage() {
   return (
-    <main className="min-h-screen flex items-center justify-center">
+    <>
+      <Navbar />
 
-      <h1 className="text-6xl font-bold">
-
-        NextShop
-
-      </h1>
-
-    </main>
+      <main className="min-h-screen flex items-center justify-center">
+        <h1 className="text-6xl font-bold">
+          Home Page
+        </h1>
+      </main>
+    </>
   );
 }
