@@ -1,15 +1,11 @@
-import Navbar from "./components/navbar/Navbar";
+import Navbar from "@/components/components/navbar/Navbar";
+import Hero from "@/sections/home/Hero";
 
 export default function HomePage() {
   return (
     <>
       <Navbar />
-
-      <main className="min-h-screen flex items-center justify-center">
-        <h1 className="text-6xl font-bold">
-          Home Page
-        </h1>
-      </main>
+      <Hero />
     </>
   );
 }
